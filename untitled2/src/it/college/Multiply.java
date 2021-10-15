@@ -7,14 +7,10 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Multiply {
-    private final String address;
 
-    public Multiply(String address){
-        this.address=address;
-    }
-
-    public void multiply() throws IOException {
-        BufferedReader reader = new BufferedReader(new FileReader(address));
+    public int multiply() throws IOException {
+        BufferedReader reader = new BufferedReader(new FileReader(
+                "D:\\Programs\\JavaProject\\untitled2\\src\\it\\college\\txt.txt"));
         String line;
         StringBuilder text = new StringBuilder();
         String ls = System.getProperty("line.separator");
@@ -44,6 +40,6 @@ public class Multiply {
         }
         double multiplier0 = Double.parseDouble(text.substring(indexMultiplierOne0, indexMultiplierOne1));
         double multiplier1 = Double.parseDouble(text.substring(indexMultiplierTwo0, indexMultiplierTwo1));
-        System.out.println(multiplier0/(1/multiplier1));
+        return (int) ((int) multiplier0/(1/multiplier1));
     }
 }
