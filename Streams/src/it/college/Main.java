@@ -1,5 +1,7 @@
 package it.college;
 
+/* Эта программа создаёт и запускает 10 потоков */
+
 public class Main {
 
     public static void main(String[] args) throws InterruptedException {
